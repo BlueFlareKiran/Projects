@@ -24,6 +24,7 @@ body {
 .right {
     width: 75vw;
     /* height: 100vh; */
+    position: relative;
 }
 .home ul li{
     display: flex;
@@ -56,10 +57,11 @@ body {
 }
 .spotifyPlaylists{
     margin: 12px;
+   
 }
 .spotifyPlaylists h1{
     font-size: 23px;
-
+   
 }
 .cardContainer{
     display: flex;
@@ -125,3 +127,117 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    padding: 13px;
+    background-color: rgb(63, 65, 65);
+    width: 70vw;
+    border-radius: 15px;
+   
+}
+.seekbar{
+    background-color: antiquewhite;
+    width: 98%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border: 50px;
+    position: relative;
+    background-color: aqua;
+    border-radius: 40px;
+    bottom: 4px;
+}
+.songicons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+.songlist ul {
+    padding: 10px 15px;
+    list-style-type: none;
+    max-height: 400px; /* Restrict height for scrollbar */
+    overflow-y: auto; /* Add vertical scrollbar */
+}
+
+.songlist ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.songlist ul::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.songlist ul::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+.songlist ul li {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #333;
+    margin: 12px 0;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.songlist ul li:hover {
+    background-color: #272727;
+    transform: scale(1.02);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-title {
+    font-size: 14px; /* Smaller font size */
+    font-weight: bold;
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal; /* Allow text wrapping */
+    line-height: 1.2em; /* Control line height */
+    max-height: 2.4em; /* Ensure a maximum of 2 lines */
+    display: -webkit-box; /* For limiting lines */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.artist {
+    font-size: 12px; /* Smaller font size for artist name */
+    color: #bbb;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px; /* Adjusted font size */
+    background-color: #272727;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.playnow:hover {
+    background-color: #333;
+}
+
